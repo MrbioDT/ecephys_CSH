@@ -71,10 +71,10 @@ def createInputJson(output_file,
                     ):
 
     # hard coded paths to code on your computer and system
-    ecephys_directory = r'C:\Users\Python\Desktop\ecephys\ecephys_spike_sorting'
+    ecephys_directory = r'C:\Users\Z8 G4\ecephys_CSH\ecephys_spike_sorting'
     
     # location of kilosor respository and kilosort version
-    kilosort_repository = r'C:\Users\Python\Desktop\KiloSort\Kilosort-2.5'
+    kilosort_repository = r'C:\Users\Z8 G4\.conda\envs\ks4_ece\Lib\site-packages\kilosort-2.5' #Y-keep2.5 for now, our ks verion is 4.0.24
 
     KS2ver = '2.5'      # must equal '3.0', '2.5' or '2.0', and match the kiilosort_repository
     
