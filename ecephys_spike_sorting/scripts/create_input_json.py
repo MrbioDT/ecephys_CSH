@@ -75,6 +75,8 @@ def createInputJson(output_file,
     
     # location of kilosor respository and kilosort version
     kilosort_repository = r'C:\Users\Z8 G4\.conda\envs\ks4_ece\Lib\site-packages\kilosort-2.5' #Y-keep2.5 for now, our ks verion is 4.0.24
+    #Y-I also rename kilosort folder to kilosort-2.5 in C:\Users\Z8 G4\.conda\envs\ks4_ece\Lib\site-packages\
+    #Y-not sure how this would effect runing of ks4 itself
 
     KS2ver = '2.5'      # must equal '3.0', '2.5' or '2.0', and match the kiilosort_repository
     
@@ -82,13 +84,13 @@ def createInputJson(output_file,
     if KS2ver == '3.0':
         include_pcs = False  # set to false for KS2ver = '3.0'
     
-    npy_matlab_repository = r'C:\Users\Python\Desktop\KiloSort\npy-matlab'
+    npy_matlab_repository = r'C:\Users\Z8 G4\.conda\envs\ks4_ece\npy-matlab'
     catGTPath = r'C:\SpikeGLX\Tools\CatGT-win'
     tPrime_path=r'C:\SpikeGLX\Tools\TPrime-win'
     cWaves_path=r'C:\SpikeGLX\Tools\C_Waves-win'
          
     # for config files and kilosort working space
-    kilosort_output_tmp = r'C:\Users\Python\Desktop\KiloSort\LocalProcessed\temp' 
+    kilosort_output_tmp = r'C:\SGL_DATA\ece_output_temp_demo' 
     
     # derived directory names
     modules_directory = os.path.join(ecephys_directory,'modules')

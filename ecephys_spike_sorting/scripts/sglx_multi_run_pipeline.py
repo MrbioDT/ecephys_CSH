@@ -42,12 +42,12 @@ ksTh_dict = {'default':'[10,4]', 'cortex':'[10,4]', 'medulla':'[10,4]', 'thalamu
 # output destination directory catGT_dest
 # If this file exists, new run data is appended to it
 #logName = 'SC024_log.csv'
-logName = 'Noisetesting2_log.csv'
+logName = 'noisetesting2_log.csv'
 
 # Raw data directory = npx_directory
 # run_specs = name, gate, trigger and probes to process
 #npx_directory = r'D:\ecephys_fork\test_data\SC_10trial'
-npx_directory = r'C:\SGL_DATA\noisetesting2_g0'
+npx_directory = r'C:\SGL_DATA'
 
 # Each run_spec is a list of 4 strings:
 #   undecorated run name (no g/t specifier, the run field in CatGT)
@@ -98,11 +98,15 @@ process_lf = True
 # Note 2: this command line includes specification of edge extraction
 # see CatGT readme for details
 # these parameters will be used for all runs
+#catGT_cmd_string = '-prb_fld -out_prb_fld -apfilter=butter,12,300,10000 -lffilter=butter,12,1,500 -gfix=0.4,0.10,0.02 '
+#ni_present = True
+#ni_extract_string = '-XA=0,1,3,500 -iXA=1,3,3,0  -XD=-1,1,50 -XD=-1,2,1.7 -XD=-1,3,5 -iXD=-1,3,5'
+
+
+# these parameters will be used for all runs
 catGT_cmd_string = '-prb_fld -out_prb_fld -apfilter=butter,12,300,10000 -lffilter=butter,12,1,500 -gfix=0.4,0.10,0.02 '
-
 ni_present = True
-ni_extract_string = '-XA=0,1,3,500 -iXA=1,3,3,0  -XD=-1,1,50 -XD=-1,2,1.7 -XD=-1,3,5 -iXD=-1,3,5'
-
+ni_extract_string = '-xa=0,0,0,1,3,500 -xia=0,0,1,3,3,0 -xd=0,0,-1,1,50 -xid=0,0,-1,2,1.7 -xid=0,0,-1,3,5'
 
 
 # ----------------------
@@ -160,7 +164,7 @@ modules = [
             'quality_metrics'
 			]
 
-json_directory = r'D:\ecephys_fork\json_files'
+json_directory = r'C:\SGL_DATA\json_files'
 
 # -----------------------
 # -----------------------
